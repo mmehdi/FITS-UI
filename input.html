@@ -22,7 +22,7 @@
 
       <div class="starter-template">
         <h1>Flexible Integrated Transport System</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <p class="lead">Use this section to enter secondary text about the project.<br> All you get is this text and a mostly barebones HTML document.</p>
     </div>
 
     <div class="row">
@@ -49,20 +49,20 @@
 
                     <!-- First Tab -->                        
                     <div class="tab-pane fade in active" id="first-tab">
-                        <h4>First Tab</h4>
+                        <h4></h4>
                         <div class="form-group">
                             <label for="first-tab-field-1" class="col-sm-2 control-label">Do you charge fare?</label>
 
 
                             <div class="radio" >
                               <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                <input type="radio" name="first-tab-radioBtns" id="radio1" value="0" checked>
                                 Yes
                             </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <input type="radio" name="first-tab-radioBtns" id="radio2" value="1">
                             No
                         </label>
                     </div>
@@ -70,10 +70,7 @@
 
                 </div>
 
-
-
-
-                <form class="form-horizontal" role="form">
+                <form class="form-horizontal" role="form" id="first-tab-form">
                     <div class="form-group">
                         <label for="first-tab-field-1" class="col-sm-2 control-label">0-1 mile</label>
                         <div class="col-sm-10">
@@ -213,22 +210,97 @@
 
             <!-- Second Tab -->                        
             <div class="tab-pane fade" id="second-tab">
-                <h4>Second Tab</h4>
-                <form class="mytab-form">
-                    <div class="control-group first-name">
-                        <label for="first-name">First Name</label>
-                        <input id="first-name" type="text" class="input-block-level">
+                <h4></h4>
+                <form class="form-horizontal" role="form" id="second-tab-form">
+                    <div class="form-group">
+                        <label for="second-tab-field-1" class="col-sm-2 control-label">Under 16 years of age</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-1" placeholder="Enter Placeholder Text">
+                        </div>
                     </div>
-                    <div class="control-group last-name">
-                        <label for="last-name">Last Name</label>
-                        <input id="last-name" type="text" class="input-block-level">
+                    <div class="form-group">
+                        <label for="second-tab-field-2" class="col-sm-2 control-label">16-21 years</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-2" placeholder="Enter Placeholder Text">
+                        </div>
                     </div>
-                    <div class="control-group">
-                        <label for="email">Email</label>
-                        <input id="email" type="text" class="input-block-level">
+                    <div class="form-group">
+                        <label for="second-tab-field-3" class="col-sm-2 control-label">22-54 years</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-3" placeholder="Enter Placeholder Text">
+                        </div>
                     </div>
-                    <div class="form-footer">
-                        <button class="btn btn-success btn-large btn-block" type="submit">Submit Query</button>
+                    <div class="form-group">
+                        <label for="second-tab-field-4" class="col-sm-2 control-label">55-60 years</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-4" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-5" class="col-sm-2 control-label">Over 60 years</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-5" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-6" class="col-sm-2 control-label">able bodied</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-6" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-7" class="col-sm-2 control-label">mobility prevents use of regular PT</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-7" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-8" class="col-sm-2 control-label">disabled wheelchair user</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-8" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-9" class="col-sm-2 control-label">disabled - other</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-9" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-10" class="col-sm-2 control-label">Health Appointments</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-10" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-11" class="col-sm-2 control-label">Shopping</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-11" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-12" class="col-sm-2 control-label">Social/Leisure</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-12" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-13" class="col-sm-2 control-label">School/Education</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-13" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-14" class="col-sm-2 control-label">Work/Commuting</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-14" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default pull-right" id="second-tab-submit">Submit</button>
+                        </div>
                     </div>
                 </form>
 
@@ -258,7 +330,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Custom JavaScript-->
+
+    <script src="js/FITS.js"></script>
 </body>
 </html>
 
