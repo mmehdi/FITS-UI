@@ -1,0 +1,108 @@
+
+
+
+
+
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+	<title>User Login</title>
+	<link href="abdn/resources/css/form.css" rel="stylesheet"  type="text/css" />		
+	<link href="abdn/resources/css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href="abdn/resources/messages/messages.css" rel="stylesheet"  type="text/css" />
+	<script type="text/javascript" src="abdn/resources/jquery/1.6/jquery.js"></script>
+	 <style TYPE="text/css">
+		.errormessage {
+		   color:red;
+		}
+		.successmessage
+		{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+
+<div id="layout">
+	<div id="header">
+		
+<h1 id="logo"><a href="#" title="#">
+	Flexible Integrated Transport System</a> 
+	<img id = "dotrural" src="abdn/resources/img/dotrural_rgb_transparent.png"></img>
+</h1> 
+
+<div id="navigation">
+	<ul>
+		<li id="first"><a href="Home page.htm" title="home">Home</a></li>
+	  	<li>
+	  	
+    	
+        	<a href="login">Login/Register</a>
+    	
+	  	</li>
+	  	<li><a href="Query.htm" title="query">Search for trips</a></li>
+	  	<li><a href="Operator data input template 1.htm" title="data input template">Data input template</a></li>
+	  	<li id="last"><a href="About.htm" title="">About us</a></li>
+	</ul>
+</div>
+    </div>
+    <div id="main">
+    	<div id="main-box">
+        	<div id="quote">
+        	"If we could get a system in place...with a common booking entry, 
+        	so that somebody could call up a vehicle that was available, irrespective
+        	 of whether that was actually in the ownership of the health board, the council, 
+        	 the third sector, then it might lead to more viability, more sustainability 
+        	 all round...That is what we should be aiming for."
+		        <span style = "font-size: 14px;">---  Audit Scotland, 2011.</span>
+        	</div>
+        </div>
+        <div id="content">
+			<div id="formsContent">
+				<form id="login" class="cleanform" action="j_spring_security_check" method="post">
+					<div class="header">
+				  		<h2>Login</h2>
+				  		
+						
+						    <span id="infomessage" class="successmessage">
+						    You have been successfully logged out.
+						    </span>
+						
+					</div>
+				  	<fieldset>
+				  		<legend>Login</legend>
+				  		<label for="j_username">
+				  			User name 
+				 		</label>
+				  		<input id="j_username" name="j_username" type="text" value=""/>
+				  		<label for="j_password">
+				  			Password 
+				 		</label>
+				  		<input id="j_password" name="j_password" type="password" value=""/>
+				  		
+				  	</fieldset>
+					<p><button type="submit">Submit</button></p>
+					<label>Don't have a user account? <a href = "register">Sign up now</a></label>
+				</form>
+			</div>
+        </div>
+	</div>
+    <div id="footer">
+		 
+ <p id="copyright">
+ 	<span>&copy; Copyright 2013 - University of Aberdeen <br />Flexible Integrated Transport System Project<br />
+		MacRobert Building, King's College, Aberdeen, AB24 5UA<br />
+		t: +44 (0) 1224 274065 e: fits@abdn.ac.uk
+	</span>
+</p>  
+<div class="inline"><img id = "de" src="abdn/resources/img/de.jpg"  /></div>
+<div class="inline"> <img id = "abdn" src="abdn/resources/img/abdn.gif" /></div>
+ 
+        
+   	</div>
+</div>
+       
+</body>
+</html>

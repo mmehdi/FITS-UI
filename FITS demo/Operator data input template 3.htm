@@ -1,0 +1,275 @@
+
+
+
+
+
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+	<title>Operator data input template</title>
+	<link href="abdn/resources/css/form.css" rel="stylesheet"  type="text/css" />		
+	<link href="abdn/resources/css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href="abdn/resources/messages/messages.css" rel="stylesheet"  type="text/css" />
+	
+	 <style TYPE="text/css">
+		.errormessage { color:red}
+		.successmessage { color:red}
+		div.field_container {
+			/*display: table-cell; */
+			display: block;;
+		    vertical-align: middle;
+		    height: 38px;
+		    border: 0px solid red;
+		}
+		
+		label.field {
+			width:150px;
+			float:left;
+		
+		}
+		
+		
+		div.field_container input{
+			padding-top:2px;
+		
+		}
+	</style>
+	
+	<script type="text/javascript" src="abdn/resources/jquery/1.9/jquery-1.9.1.js"></script>
+	
+</head>
+<body>
+
+<div id="layout">
+	<div id="header">
+		
+<h1 id="logo"><a href="#" title="#">
+	Flexible Integrated Transport System</a> 
+	<img id = "dotrural" src="abdn/resources/img/dotrural_rgb_transparent.png"></img>
+</h1> 
+
+<div id="navigation">
+	<ul>
+		<li id="first"><a href="Home page.htm" title="home">Home</a></li>
+	  	<li>
+	  	
+	  	<span style = "font-size: 120%; margin: 5px 5px 5px 5px;">Logged in: cheng,</span>
+	  		<a style = "padding-left: 1px; font-size: 95%" href="User Logout.htm">Logout</a>
+   		
+    	
+	  	</li>
+	  	<li><a href="Query.htm" title="query">Search for trips</a></li>
+	  	<li><a href="Operator data input template 1.htm" title="data input template">Data input template</a></li>
+	  	<li id="last"><a href="About.htm" title="">About us</a></li>
+	</ul>
+
+</div>
+    </div>
+    <div id="main">
+    	<div id="main-box">
+        	<div id="quote">
+        	"If we could get a system in place...with a common booking entry, 
+        	so that somebody could call up a vehicle that was available, irrespective
+        	 of whether that was actually in the ownership of the health board, the council, 
+        	 the third sector, then it might lead to more viability, more sustainability 
+        	 all round...That is what we should be aiming for."
+		        <span style = "font-size: 14px;">---  Audit Scotland, 2011.</span>
+        	</div>
+        </div>
+        <div id="content">
+			<div id="formsContent">
+				  	<!-- 
+				  	<fieldset>
+				  		<legend>Fare structure information</legend>
+				  		
+				  	<div class="field_container">
+				  		<label for="charge_fare" class = "field">do you charge fares?</label>
+				  		<input type="radio" name="charge" value="yes">yes   
+						<input type="radio" name="charge" value="no" style="margin-left:5px;">no
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="0-1mile" class = "field">0-1 mile</label>
+				  		<input id="0-1mile" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="1-2miles" class = "field">1-2 miles</label>
+				  		<input id="1-2miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="2-3miles" class = "field">2-3 miles</label>
+				  		<input id="2-3miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="3-5miles" class = "field">3-5 miles</label>
+				  		<input id="3-5miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="5-7miles" class = "field">5-7 miles</label>
+				  		<input id="5-7miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="7-10miles" class = "field">7-10 miles</label>
+				  		<input id="7-10miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="10-15miles" class = "field">10-15 miles</label>
+				  		<input id="10-15miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="15-20miles" class = "field">15-20 miles</label>
+				  		<input id="15-20miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="20-30miles" class = "field">20-30 miles</label>
+				  		<input id="20-30miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="30-50miles" class = "field">30-50 miles</label>
+				  		<input id="30-50miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="50-100miles" class = "field">50-100 miles</label>
+				  		<input id="50-100miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="over100miles" class = "field">over 100 miles</label>
+				  		<input id="over100miles" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="fare_multiplier" class = "field">return fare multiplier</label>
+				  		<input id="fare_multiplier" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="discount_for_over60" class = "field">% discount for over 60s</label>
+				  		<input id="discount_for_over60" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="discount_for_under16" class = "field">% discount for under 16s</label>
+				  		<input id="discount_for_under16" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="escort_charge_fare" class = "field">are escorts charged a fare?</label>
+				  		<input id="escort_charge_fare" type="text">
+				  	</div>
+				  	<div class="field_container">
+				  		<label for="d" class = "field">does this service charge for dead mileage?</label>
+				  		<input id="d" type="text">
+				  	</div>
+				  	
+				  </fieldset>
+				<fieldset>
+				  	<legend>Eligibility violation surcharges</legend>
+				  		<div class="field_container">
+				  		<label for="under16" class = "field">Under 16 years of age</label>
+				  		<input id="under16" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="16-21years" class = "field">16-21 years</label>
+				  		<input id="16-21years" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="22-54years" class = "field">22-54 years</label>
+				  		<input id="22-54years" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="55-59years" class = "field">55-59 years</label>
+				  		<input id="55-59years" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="60years-and-over" class = "field">60 years and over</label>
+				  		<input id="60years-and-over" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="able-bodied" class = "field">able bodied</label>
+				  		<input id="able-bodied" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="mobility-prevents-use-of-regular-PT" class = "field">mobility prevents use of regular PT</label>
+				  		<input id="mobility-prevents-use-of-regular-PT" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="disabled-wheelchair-user" class = "field">disabled wheelchair user</label>
+				  		<input id="disabled-wheelchair-user" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="disabled-other" class = "field">disabled - other</label>
+				  		<input id="disabled-other" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="health-appointments" class = "field">Health Appointments</label>
+				  		<input id="health-appointments" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="shopping" class = "field">Shopping</label>
+				  		<input id="shopping" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="social-leisure" class = "field">Social/Leisure</label>
+				  		<input id="social-leisure" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="school-education" class = "field">School/Education</label>
+				  		<input id="school-education" type="text">
+				  		</div>
+				  		<div class="field_container">
+				  		<label for="work-commuting" class = "field">Work/Commuting</label>
+				  		<input id="work-commuting" type="text">
+				  		</div>
+				  		
+				</fieldset>
+				
+			<input type="submit" value="Submit" 
+    onclick="window.location='operator_data_input_complete';" style="margin-left: 5px;margin-top:12px;"/>      
+     -->
+     
+     Tab form for 
+<ul>
+<li>fare structure</li>
+<li>eligibility information</li>
+<li>eligibility disutilities</li>
+<li>operating area and penalty surcharges for operating outside</li>
+<li>operating hours and penalty surcharges for operating outside </li>
+</ul>
+
+
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+			</div>
+        </div>
+	</div>
+    <div id="footer">
+		 
+ <p id="copyright">
+ 	<span>&copy; Copyright 2013 - University of Aberdeen <br />Flexible Integrated Transport System Project<br />
+		MacRobert Building, King's College, Aberdeen, AB24 5UA<br />
+		t: +44 (0) 1224 274065 e: fits@abdn.ac.uk
+	</span>
+</p>  
+<div class="inline"><img id = "de" src="abdn/resources/img/de.jpg"  /></div>
+<div class="inline"> <img id = "abdn" src="abdn/resources/img/abdn.gif" /></div>
+ 
+        
+   	</div>
+</div>
+       
+</body>
+</html>

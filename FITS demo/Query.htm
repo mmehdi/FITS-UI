@@ -1,0 +1,391 @@
+
+
+
+
+
+
+
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+	<title>Query</title>
+	<link href="abdn/resources/css/form.css" rel="stylesheet"  type="text/css" />	
+	<link href="abdn/resources/css/screen.css" type="text/css" rel="stylesheet" />
+	<link href="abdn/resources/css/jquery-ui/jquery-ui.css" type="text/css" rel="stylesheet" />
+	<link href="abdn/resources/css/jquery.timepicker.css" rel="stylesheet"  type="text/css" />	
+	<!-- <link href="abdn/resources/messages/messages.css" rel="stylesheet"  type="text/css" />	  -->
+	<style>
+		body {
+			font-family: Lucida Grande, sans-serif;
+			font-size: .75em;
+			margin: 1em auto;
+			width: 763px;
+		}
+		#navigation ul li {	padding: 5px;}
+		#quote span {	margin: 5px 0px 5px 5px; }
+		span.error {	color: #D8000C;}
+		span.compulsory {color: #D8000C; font-size:10px; margin-left:2px;}
+		h2 { color: #2567ee; } 
+		div.prefer_img {	position: relative; width: 80px; }
+		div.prefer_img p.up{	margin:0 0 -4 0; }
+		div.prefer_img p.down{	margin:-12 0 0 0; }
+		div.prefer_img img{	margin:0px; }
+		div .wrapper {
+			margin-left:0px;
+			height: 160px;
+			margin-bottom:12px;
+		}
+		div .left{
+			float:left;
+			width:280px;
+		}
+		div .right{
+			padding-left:5px;
+			padding-top:5px;
+			float:left;
+		}
+		table.time {
+			border: 0px solid #CDCDCD;
+			margin: 0px;
+		}
+		
+		td.time  {
+    		padding: 0;
+   			border: 0px solid #CDCDCD;
+}
+		
+		/*
+		table.time {
+			border: 0px solid #CDCDCD;
+			padding: 0px ;
+			margin: 0px;
+		}
+		
+		tr.time {
+			border: 0px solid #CDCDCD;
+			padding: 0px ;
+		}
+		td.time {
+			border: 0px solid #CDCDCD;
+			padding: 0px ;
+		}
+		*/
+		
+		.ui-datepicker-trigger img, #datepicker, #timepicker{
+		    display: inline-block;
+		    vertical-align: top;
+		}
+		#sortable { list-style-type: none; margin: 5 0 0 3; padding: 0; width: 100%; }
+		#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+		#sortable li span { position: absolute; margin-left: -1.3em; }
+		#sortable2 { list-style-type: none; margin: 5 0 0 3; padding: 0; width: 100%; }
+		#sortable2 li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+		#sortable2 li span { position: absolute; margin-left: -1.3em; }
+	</style>
+	<script type="text/javascript" src="abdn/resources/jquery/1.9/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="abdn/resources/jqueryui/1.10/jquery-ui-1.10.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<script type="text/javascript" src="abdn/resources/autocomplete.js"></script>
+	<script type="text/javascript" src="abdn/resources/jquery/jquery.timepicker.js"></script>
+	<script>
+		$(function() {
+			$( "#sortable" ).sortable();
+			$( "#sortable" ).disableSelection();
+			$( "#sortable2" ).sortable();
+			$( "#sortable2" ).disableSelection();
+			$( "#datepicker" ).datepicker({
+				defaultDate: "+0w",
+				changeMonth: true,
+				numberOfMonths: 1,
+				showOn: "button",
+				buttonImage: "abdn/resources/img/calendar.gif",
+				buttonImageOnly: true
+			});
+		});
+		/*
+		function handleClick (cb){
+			if(cb.checked){
+				document.getElementById("accompany").selectedIndex = 1;
+			}else{
+				document.getElementById("accompany").selectedIndex = 0;
+			}
+		}
+		*/
+	</script>
+</head>
+<body onload="initialize()">
+	<div id="layout">
+       <div id="header">
+         
+<h1 id="logo"><a href="#" title="#">
+	Flexible Integrated Transport System</a> 
+	<img id = "dotrural" src="abdn/resources/img/dotrural_rgb_transparent.png"></img>
+</h1> 
+
+<div id="navigation">
+	<ul>
+		<li id="first"><a href="Home page.htm" title="home">Home</a></li>
+	  	<li>
+	  	
+	  	<span style = "font-size: 120%; margin: 5px 5px 5px 5px;">Logged in: cheng,</span>
+	  		<a style = "padding-left: 1px; font-size: 95%" href="User Logout.htm">Logout</a>
+   		
+    	
+	  	</li>
+	  	<li><a href="Query.htm" title="query">Search for trips</a></li>
+	  	<li><a href="Operator data input template 1.htm" title="data input template">Data input template</a></li>
+	  	<li id="last"><a href="About.htm" title="">About us</a></li>
+	</ul>
+
+</div>
+      </div>
+      <div id="main">
+      	<div id="main-box">
+        	<div id="quote">
+        	"If we could get a system in place...with a common booking entry, 
+        	so that somebody could call up a vehicle that was available, irrespective
+        	 of whether that was actually in the ownership of the health board, the council, 
+        	 the third sector, then it might lead to more viability, more sustainability 
+        	 all round...That is what we should be aiming for."
+		        <span style = "font-size: 14px;">---  Audit Scotland, 2011.</span>
+        	</div>
+        </div>
+        <div id="content">
+			<div id="formsContent">
+				<form id="query_fts" class="cleanform" action="/abdn/query_fts" method="post">
+					<div class="header">
+				  		<h2>Query Form</h2>
+				  		
+					</div>
+					<fieldset>
+				  		<legend>From</legend>
+				  		<label for = "search_from">search:</label>
+      					<input id="autocomplete_f" placeholder="Enter your address"
+             				onFocus="geolocate_f()" type="text"></input>
+             			<div class = "table_from">
+				  			<table class="address">
+						      <tr>
+						        <td class="label">Street address</td>
+						        <td class="slimField">
+						        	<input id="street_number_f" name="street_number_f" style="width: 100%;" class="field" disabled="disabled" type="text" value=""/>
+						        </td>
+						        <td class="wideField" colspan="2">
+						        	<input id="route_f" name="route_f" style="width: 100%;" class="field" disabled="disabled" type="text" value=""/>
+						         </td>
+						      </tr>
+						      <tr>
+						        <td class="label">City<span class="compulsory">*</span></td>
+						        <td class="wideField" colspan="3">
+						        	<input id="locality_f" name="locality_f" class="field" disabled="disabled" type="text" value=""/>
+						        </td>
+						      </tr>
+						      <tr>
+        						<td class="label">postcode<span class="compulsory">*</span></td>
+        						<td class="wideField">
+        							<input id="postal_code_f" name="postal_code_f" style="width: 100%;" class="field" disabled="disabled" type="text" value=""/>
+        						</td>
+      							</tr>
+      							<!--  
+     						  <tr>
+     							 <td class="label">Country<span class="compulsory">*</span></td>
+        						<td class="wideField" colspan="3">
+        							<input id="country_f" name="country_f" class="field" disabled="disabled" type="text" value="uk"/>
+        						</td>
+     						 </tr>
+     						 -->
+    						</table>
+					 </div> 		
+				</fieldset>
+				<fieldset>
+					<legend>To</legend>
+				  	<label for = "search_to">search:</label>
+      				<input id="autocomplete_t" placeholder="Enter your address"
+             				onFocus="geolocate_t()" type="text"></input>
+             		<div class = "table_from">
+				  		<table class="address">
+					      <tr>
+					        <td class="label">Street address</td>
+					        <td class="slimField">
+					              <input id="street_number_t" name="street_number_t" style="width: 100%;" class="field" disabled="disabled" type="text" value=""/>
+					        </td>
+					        <td class="wideField" colspan="2">
+					               <input id="route_t" name="route_t" style="width: 100%;" class="field" disabled="disabled" type="text" value=""/>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td class="label">City<span class="compulsory">*</span></td>
+					        <td class="wideField" colspan="3">
+					               <input id="locality_t" name="locality_t" class="field" disabled="disabled" type="text" value=""/>
+					        </td>
+					      </tr>
+					      <tr>
+       						<td class="label">postcode<span class="compulsory">*</span></td>
+       						<td class="wideField">
+             						 <input id="postal_code_t" name="postal_code_t" style="width: 100%;" class="field" disabled="disabled" type="text" value=""/>
+             						</td>
+     							</tr>
+     							<!-- 
+    						  <tr>
+    							 <td class="label">Country<span class="compulsory">*</span></td>
+       						<td class="wideField" colspan="3">
+             						 <input id="country_t" name="country_t" class="field" disabled="disabled" type="text" value="uk"/>
+             					</td>
+    						  </tr>
+    						  -->
+    					</table>
+					</div> 		
+				</fieldset>
+				<fieldset style = "padding-right: 0px;">
+				  	<legend>Time</legend>
+				  	<table class = "time"><tr class = "time"><td class = "time">
+				  	<div class = "inline">
+				  			<select id="time_constraint" name="time_constraint">
+								<option value="depart_at">Depart at</option>
+								<option value="arrive_by">Arrive by</option>
+							</select>
+				  	</div>
+				  	<div class = "inline" >
+				  			<input id="datepicker" name="datepicker" style="margin-right:0px;width: 90px;margin-left: -3px;" class="field" type="text" value=""/><span class="compulsory">*</span>
+				  			
+				  	</div>
+				  	</td></tr><tr class = "time"><td class = "time">
+				  	<div>
+			  				<script>
+							  $(function() {
+								$('#timepicker').timepicker({ 'scrollDefaultNow': true });
+							  });
+							</script>
+							<label for = "timepicker" style="font-weight: normal; margin-left: 3px;">time<span class="compulsory">*</span>: </label>
+							<input id="timepicker" name="timepicker" style="margin-right:0px; width:75px; margin-left: 8px;" class="time" type="text" value=""/><span style ="font-size: 12px; ">(please click and select the time)</span>
+							
+				  	</div>
+				  	
+				  	</td></tr></table>
+				  	
+				  	
+				  	
+				</fieldset>
+				<fieldset>
+				  	<legend>Passenger</legend>
+				  	<label for="age_group">
+						Age group<span class="compulsory">*</span>:
+					</label>
+					<select id="age_group" name="age_group">
+						<option value="under 16">under 16</option>
+						<option value="16 to 21">16 to 21</option>
+						<option value="22 to 54">22 to 54</option>
+						<option value="55 to 59">55 to 59</option>
+						<option selected="selected" value="60 and above">60 and above</option>
+					</select>
+					<label for="mobility_status">
+						Mobility Status<span class="compulsory">*</span>:
+					</label>
+					<select id="mobility_status" name="mobility_status">
+						<option selected="selected" value="Able bodied">Able bodied</option>
+						<option value="Disabled - wheelchair user">Disabled - wheelchair user</option>
+						<option value="Disabled - other">Disabled - other</option>
+						<option value="Mobility impaired - unable to use regular PT">Mobility impaired - unable to use regular PT</option>
+					</select>
+					<label for="journey_purpose">
+						Journey purpose<span class="compulsory">*</span>:
+					</label>
+					<select id="journey_purpose" name="journey_purpose">
+						<option selected="selected" value="Health Appointment">Health Appointment&nbsp;&nbsp;</option>
+						<option value="Shopping">Shopping</option>
+						<option value="Social/Leisure">Social/Leisure</option>
+						<option value="School/Education">School/Education</option>
+						<option value="Work/Commuting">Work/Commuting</option>
+						<option value="Other">Other</option>
+					</select>
+					<div style="height:22px;">
+						<div class = "inline"><input id="any_accompanying1" name="any_accompanying" onclick="handleClick(this);" style="margin-top:2px;" type="checkbox" value="true"/><input type="hidden" name="_any_accompanying" value="on"/></div> 
+						<div class = "inline"><label for="any_accompanying">Do you need any accompanying person?</label><span style = "font-size:12px;">(if yes, check the box)</span></div>
+					</div>
+					<!-- 
+					<div style="width:320px;padding-left:25px;">
+						<div class = "inline"><label for="accompany">If yes, how many people are required?&nbsp;</label></div>
+						<div class = "inline"><select id="accompany" name="accompany" style="margin-left:3px;">
+								<option selected="selected" value="0" selected="selected">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+							</select>
+						</div>
+					</div>
+					 -->
+				</fieldset>
+				<fieldset>
+					<legend>Preference</legend>
+					<div class="wrapper">
+					<div class="left">
+					<label for = "sortable">preferred options:</label>
+					<ol id="sortable">
+						<li id='ranking_1'  class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Minimise travel time</li>
+						<li id='ranking_2' class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Minimise fare</li>
+						<li id='ranking_3' class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Minimise number of changes</li>
+					</ol>
+					<div style = "font-size: 11px;margin-top:4px;">(please click and drag to change your preference ordering)</div>
+					</div>
+					<div class="right">
+					<div class= "prefer_img">
+						<p class="up">more preferred</p>
+						<img width="30" height="113" alt="" src="abdn/resources/img/gradient arrow.png" ></img>
+						<p class="down">less preferred</p>
+					</div>
+					</div>
+					</div>
+					<!--  
+					<div class="wrapper">
+						<div class="left">
+							<label for = "sortable2" style="text-align:left;">prefered types of operators:</label>
+							<ol id="sortable2">
+								<li id='ranking_4' class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Patient Transport Service</li>
+								<li id='ranking_5' class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Fixed-route service</li>
+								<li id='ranking_6' class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Door-to-door service</li>
+								<li id='ranking_7' class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Car service</li>
+							</ol>
+						</div>
+						<div class="right">
+							<div class="prefer_img">
+								<p class="up">more prefered</p>
+								<img width="30" height="140" alt="" src="abdn/resources/img/gradient arrow.png" ></img>
+								<p class="down">less prefered</p>
+							</div>
+						</div>
+					</div>
+					-->
+				</fieldset>
+				<input id="prefered_options" name="prefered_options" type="hidden" value=""/>
+				<p>
+   
+
+<button type="submit" onclick="window.location='Matching result.htm';">Submit</button>
+
+</p>
+			</form>
+			<script type="text/javascript">
+				$("#query_fts").submit(function() {  
+					$('#prefered_options').val($( "#sortable" ).sortable("serialize"));
+					//$('#prefered_operators').val($( "#sortable2" ).sortable("serialize"));
+				});	
+			</script>
+			</div>
+        </div>
+    </div>
+	<div id="footer">
+		 
+ <p id="copyright">
+ 	<span>&copy; Copyright 2013 - University of Aberdeen <br />Flexible Integrated Transport System Project<br />
+		MacRobert Building, King's College, Aberdeen, AB24 5UA<br />
+		t: +44 (0) 1224 274065 e: fits@abdn.ac.uk
+	</span>
+</p>  
+<div class="inline"><img id = "de" src="abdn/resources/img/de.jpg"  /></div>
+<div class="inline"> <img id = "abdn" src="abdn/resources/img/abdn.gif" /></div>
+ 
+        
+    </div>
+</div>
+
+</body>
+</html>

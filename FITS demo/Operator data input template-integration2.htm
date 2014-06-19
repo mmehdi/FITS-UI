@@ -1,0 +1,611 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mujtaba Mehdi">
+    
+    <title>Operator data input template</title>
+    
+    <!-- Custom styles for this template -->
+     
+         <!-- Bootstrap core CSS -->
+             <link href="abdn/resources/css/style.css" rel="stylesheet"  type="text/css" />
+
+
+     <link href="abdn/resources/css/bootstrap.css" rel="stylesheet"> 
+
+    <link href="abdn/resources/css/form.css" rel="stylesheet"  type="text/css" />   
+        
+    <link href="abdn/resources/css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    
+    <link href="abdn/resources/messages/messages.css" rel="stylesheet"  type="text/css" />
+        
+</head>
+<body>
+
+<div id="layout">
+    <div id="header">
+        
+<h1 id="logo"><a href="#" title="#">
+    Flexible Integrated Transport System</a> 
+    <img id = "dotrural" src="abdn/resources/img/dotrural_rgb_transparent.png"></img>
+</h1> 
+
+<div id="navigation">
+    <ul>
+        <li id="first"><a href="Home page.htm" title="home">Home</a></li>
+        <li>
+        
+        <span style = "font-size: 120%; margin: 5px 5px 5px 5px;">Logged in: cheng,</span>
+            <a style = "padding-left: 1px; font-size: 95%" href="User Logout.htm">Logout</a>
+        
+        
+        </li>
+        <li><a href="Query.htm" title="query">Search for trips</a></li>
+        <li><a href="Operator data input template 1.htm" title="data input template">Data input template</a></li>
+        <li id="last"><a href="About.htm" title="">About us</a></li>
+    </ul>
+
+</div>
+    </div>
+    <div id="main">
+        <div id="main-box">
+            <div id="quote">
+            "If we could get a system in place...with a common booking entry, 
+            so that somebody could call up a vehicle that was available, irrespective
+             of whether that was actually in the ownership of the health board, the council, 
+             the third sector, then it might lead to more viability, more sustainability 
+             all round...That is what we should be aiming for."
+                <span style = "font-size: 14px;">---  Audit Scotland, 2011.</span>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Input Tabs
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab-general" data-toggle="tab">General Information</a>
+                        <li><a href="#first-tab" data-toggle="tab">First Tab</a>
+                        </li>
+                        <li><a href="#second-tab" data-toggle="tab">Second Tab</a>
+                        </li>
+                        <li><a href="#third-tab" data-toggle="tab">Third Tab</a>
+                        </li>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+
+                   <!-- General Information Tab -->                        
+                    <div class="tab-pane fade in active" id="tab-general">
+                        <p>Please provide general information about this service.</p>
+
+                <form class="form-horizontal" role="form" id="tab-general-form">
+                    <div class="form-group">
+                        <label for="tab-general-field-1" class="col-sm-2 control-label">Service Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="tab-general-field-1" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tab-general-field-2" class="col-sm-2 control-label">Service Description</label>
+                        <div class="col-sm-10">
+                        <textarea rows="5" cols="5" class="form-control" id="tab-general-field-2" name="tab-general-field-2" title="Please enter service description." required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-3" class="col-sm-2 control-label">5-7 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-3" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default pull-right" id="first-tab-submit">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                    <div class="range-head">
+    <div class="range-values">
+      <span class="r-0">0:00</span>
+      <span class="r-3">3:00</span>
+      <span class="r-6">6:00</span>
+      <span class="r-9">9:00</span>
+      <span class="r-12">12:00</span>
+      <span class="r-15">15:00</span>
+      <span class="r-18">18:00</span>
+      <span class="r-21">21:00</span>
+      <span class="r-24">24:00</span>
+    </div>
+  </div>
+  
+  <div class="range-day" id="range-day-1" data-day="1">
+    <input type="checkbox" name="day-1" id="day-1" value="1" class="range-checkbox" checked>
+    <label for="day-1" class="range-label">Monday:</label>
+    <div id="range-slider-1" class="range-slider"></div>
+    <span id="range-time-1" class="range-time"></span>
+  </div>
+  
+  <div class="range-day" id="range-day-2" data-day="2">
+    <input type="checkbox" name="day-2" id="day-2" value="1" class="range-checkbox" checked>
+    <label for="day-2" class="range-label">Tuesday:</label>
+    <div id="range-slider-2" class="range-slider"></div>
+    <span id="range-time-2" class="range-time"></span>
+  </div>
+  
+  <div class="range-day" id="range-day-3" data-day="3">
+    <input type="checkbox" name="day-3" id="day-3" value="1" class="range-checkbox" checked>
+    <label for="day-3" class="range-label">Wednesday:</label>  
+    <div id="range-slider-3" class="range-slider"></div>
+    <span id="range-time-3" class="range-time"></span>
+  </div>
+  
+  <div class="range-day" id="range-day-4" data-day="4">
+    <input type="checkbox" name="day-4" id="day-4" value="1" class="range-checkbox" checked>
+    <label for="day-4" class="range-label">Thursday‎:</label>  
+    <div id="range-slider-4" class="range-slider"></div>
+    <span id="range-time-4" class="range-time"></span>
+  </div>
+  
+  <div class="range-day" id="range-day-5" data-day="5">
+    <input type="checkbox" name="day-5" id="day-5" value="1" class="range-checkbox" checked>
+    <label for="day-5" class="range-label">Friday:</label>  
+    <div id="range-slider-5" class="range-slider"></div>
+    <span id="range-time-5" class="range-time"></span>
+  </div>
+  
+  <div class="range-day" id="range-day-6" data-day="6">
+    <input type="checkbox" name="day-6" id="day-6" value="1" class="range-checkbox" checked>
+    <label for="day-6" class="range-label">Saturday:</label>  
+    <div id="range-slider-6" class="range-slider"></div>
+    <span id="range-time-6" class="range-time"></span>
+  </div>
+  
+  <div class="range-day" id="range-day-7" data-day="7">
+    <input type="checkbox" name="day-7" id="day-7" value="1" class="range-checkbox">
+    <label for="day-7" class="range-label">Sunday:</label>  
+    <div id="range-slider-7" class="range-slider"></div>
+    <span id="range-time-7" class="range-time"></span>
+  </div>
+
+</div>
+                </form>
+
+
+            </div> <!--tab-->
+
+
+                    <!-- First Tab -->                        
+                    <div class="tab-pane fade" id="first-tab">
+                        <h4></h4>
+                        <div class="form-group">
+                            <label for="first-tab-field-1" class="col-sm-2 control-label">Do you charge fare?</label>
+
+
+                            <div class="radio" >
+                              <label>
+                                <input type="radio" name="first-tab-radioBtns" id="radio1" value="0" checked>
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="first-tab-radioBtns" id="radio2" value="1">
+                            No
+                        </label>
+                    </div>
+
+
+                </div>
+
+                <form class="form-horizontal" role="form" id="first-tab-form">
+                    <div class="form-group">
+                        <label for="first-tab-field-1" class="col-sm-2 control-label">0-1 mile</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-1" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-2" class="col-sm-2 control-label">2-4 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-2" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-3" class="col-sm-2 control-label">5-7 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-3" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-4" class="col-sm-2 control-label">8-10 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-4" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-5" class="col-sm-2 control-label">11-13 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-5" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-6" class="col-sm-2 control-label">14-16 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-6" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-7" class="col-sm-2 control-label">17-20 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-7" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-8" class="col-sm-2 control-label">21-30 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-8" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-9" class="col-sm-2 control-label">31-40 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-9" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-10" class="col-sm-2 control-label">41-50 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-10" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-11" class="col-sm-2 control-label">51-60 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-11" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-12" class="col-sm-2 control-label">61-70 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-12" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-13" class="col-sm-2 control-label">71-80 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-13" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-14" class="col-sm-2 control-label">81-90 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-14" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-15" class="col-sm-2 control-label">91-100 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-15" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-16" class="col-sm-2 control-label">Over 100 miles</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-16" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-17" class="col-sm-2 control-label">return fare multiplier</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-17" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-18" class="col-sm-2 control-label">% discount for over 60s</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-18" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-19" class="col-sm-2 control-label">% discount for under 16s</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-19" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-20" class="col-sm-2 control-label">Are escorts charged a fare?</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-20" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-tab-field-21" class="col-sm-2 control-label">Does this service charge for dead mileage?</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="first-tab-field-21" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default pull-right" id="first-tab-submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- Second Tab -->                        
+            <div class="tab-pane fade" id="second-tab">
+                <h4></h4>
+                <form class="form-horizontal" role="form" id="second-tab-form">
+                    <div class="form-group">
+                        <label for="second-tab-field-1" class="col-sm-2 control-label">Under 16 years of age</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-1" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-2" class="col-sm-2 control-label">16-21 years</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-2" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-3" class="col-sm-2 control-label">22-54 years</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-3" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-4" class="col-sm-2 control-label">55-60 years</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-4" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-5" class="col-sm-2 control-label">Over 60 years</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-5" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-6" class="col-sm-2 control-label">able bodied</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-6" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-7" class="col-sm-2 control-label">mobility prevents use of regular PT</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-7" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-8" class="col-sm-2 control-label">disabled wheelchair user</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-8" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-9" class="col-sm-2 control-label">disabled - other</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-9" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-10" class="col-sm-2 control-label">Health Appointments</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-10" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-11" class="col-sm-2 control-label">Shopping</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-11" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-12" class="col-sm-2 control-label">Social/Leisure</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-12" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-13" class="col-sm-2 control-label">School/Education</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-13" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="second-tab-field-14" class="col-sm-2 control-label">Work/Commuting</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="second-tab-field-14" placeholder="Enter Placeholder Text">
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default pull-right" id="second-tab-submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+                    </div> <!-- tab->
+
+                    <!-- Third Tab -->                        
+                    <div class="tab-pane fade" id="third-tab">
+                        <h4>Third Tab</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+<!-- /.row -->
+
+
+</div><!-- /.container -->
+
+        </div>
+    </div>
+    <div id="footer">
+         
+ <p id="copyright">
+    <span>&copy; Copyright 2013 - University of Aberdeen <br />Flexible Integrated Transport System Project<br />
+        MacRobert Building, King's College, Aberdeen, AB24 5UA<br />
+        t: +44 (0) 1224 274065 e: fits@abdn.ac.uk
+    </span>
+</p>  
+<div class="inline"><img id = "de" src="abdn/resources/img/de.jpg"  /></div>
+<div class="inline"> <img id = "abdn" src="abdn/resources/img/abdn.gif" /></div>
+ 
+        
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   <script src="abdn/resources/jquery/1.10/jquery-1.10.2.js "></script>  
+    <script src="abdn/resources/bootstrap/bootstrap.min.js "></script>
+
+    <!-- Custom JavaScript-->
+
+    <script src="abdn/resources/jquery/FITS.js"></script> 
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+ <script type="text/javascript">
+    var rangeTimes = [];
+
+$(".range-slider").slider({
+        range: true,
+    min: 0,
+    max: 1440,
+    values: [540, 1080],
+    step:30,
+    slide: slideTime,
+    change: updateOpeningHours
+    });
+
+    function slideTime(event, ui){
+    if (event && event.target) {
+      var $rangeslider = $(event.target);
+      var $rangeday = $rangeslider.closest(".range-day");
+      var rangeday_d = parseInt($rangeday.data('day'));
+      var $rangecheck = $rangeday.find(":checkbox");
+      var $rangetime = $rangeslider.next(".range-time");
+    }
+    
+    if ($rangecheck.is(':checked')) {
+      $rangeday.removeClass('range-day-disabled');
+      $rangeslider.slider('enable');
+      
+      if (ui!==undefined) {
+        var val0 = ui.values[0],
+                  val1 = ui.values[1];
+      } else {
+        var val0 = $rangeslider.slider('values', 0),
+                  val1 = $rangeslider.slider('values', 1);
+      }
+      
+      var minutes0 = parseInt(val0 % 60, 10),
+                hours0 = parseInt(val0 / 60 % 24, 10),
+                minutes1 = parseInt(val1 % 60, 10),
+                hours1 = parseInt(val1 / 60 % 24, 10);
+      if (hours1==0) hours1=24;
+      
+          rangeTimes[rangeday_d] = [getTime(hours0, minutes0),getTime(hours1, minutes1)];
+        
+      $rangetime.text(rangeTimes[rangeday_d][0] + ' - ' + rangeTimes[rangeday_d][1]);
+      
+    } else {
+      $rangeday.addClass('range-day-disabled');
+      $rangeslider.slider('disable');
+      
+      rangeTimes[rangeday_d] = [];
+      
+      $rangetime.text('Closed');
+    }
+    }
+
+  function updateOpeningHours() {
+    if ($('#schedule').length) {
+      $('#schedule tbody').empty();
+    } else {
+      $('body').append('<br>\
+      <table id="schedule">\
+        <thead>\
+            <tr>\
+          <th>Day</th>\
+                <th>Start Time</th>\
+                <th>End Time</th>\
+            </tr>\
+        </thead>\
+        <tbody>\
+        </tbody>\
+      </table>');
+    }
+    for (d=1; d<=7; d++) {
+      $('#schedule tbody').append('<tr>'+
+               '<td>'+d+'</td>'+
+               '<td>'+(rangeTimes[d][0]===undefined?'Closed':rangeTimes[d][0])+'</td>'+
+         '<td>'+(rangeTimes[d][1]===undefined?'':rangeTimes[d][1])+'</td>'+
+            '</tr>');
+    }
+  }
+
+    function getTime(hours, minutes) {
+        var time = null; 
+        minutes = minutes + "";
+        if (minutes.length == 1) {
+      minutes = "0" + minutes;
+        }
+        return hours + ":" + minutes;
+    }
+
+  $('.range-checkbox').on('change', function(){
+    var $rangecheck = $(this);
+    var $rangeslider = $rangecheck.closest('.range-day').find('.range-slider');
+    slideTime({target:$rangeslider});
+    updateOpeningHours();
+  });
+
+    $("#scheduleSubmit").on('click', updateOpeningHours);
+
+slideTime({target:$('#range-slider-1')});
+slideTime({target:$('#range-slider-2')});
+slideTime({target:$('#range-slider-3')});
+slideTime({target:$('#range-slider-4')});
+slideTime({target:$('#range-slider-5')});
+slideTime({target:$('#range-slider-6')});
+slideTime({target:$('#range-slider-7')});
+updateOpeningHours();
+
+</script>
+
+</body>
+</html>
