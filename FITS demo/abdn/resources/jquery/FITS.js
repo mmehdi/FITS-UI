@@ -70,7 +70,7 @@ $(".range-slider").slider({
     if ($('#schedule').length) {
       $('#schedule tbody').empty();
     } else {
-      $('body').append('<br>\
+      $('#tab-general-form').append('<br>\
       <table id="schedule">\
 	    <thead>\
 		    <tr>\

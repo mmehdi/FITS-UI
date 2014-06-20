@@ -137,7 +137,9 @@ h5 { font-size:100%; }
       
       padding: 10px 12px;
       }
-      
+      #input-content{
+       padding: 10px 0px; 
+      }
       #footer {
       padding: 10px 0 10px 0px; margin-left: 23px;
       /* color: #aaaaaa; */
