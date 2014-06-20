@@ -1,12 +1,29 @@
 $(document).ready(function() {
-    $("input[name$='first-tab-radioBtns']").click(function() {
+
+$("#tab-fare-structure-form-radioBtns").change();
+
+    $("input[name$='tab-fare-structure-radioBtns']").click(function() {
         var radioVal = $(this).val();
         
       if(radioVal==0)
-          $("#first-tab-form").fadeIn('slow');
+          $("#tab-fare-structure-form").fadeIn('slow');
       else
-      	  $("#first-tab-form").fadeOut('slow');
+      	  $("#tab-fare-structure-form").fadeOut('slow');
     });
+
+
+  $('#tab-eligibility-field-8-text').hide();
+
+  $('#tab-eligibility-field-8').change(function() {
+      if (this.checked) {
+          $('#tab-eligibility-field-8-text').fadeIn('slow');
+      }
+      else {
+        $('#tab-eligibility-field-8-text').fadeOut('slow');
+      }
+  });
+
+    
 });
 
 

@@ -68,247 +68,259 @@
                 <div class="container">
 
                     <div class="row">
-                        <div class="col-md-8">
-                         <div class="panel-group" id="accordion">
+                        <div class="col-md-10 col-lg-8">
+                           <div class="panel-group" id="accordion">
 
-                          <div class="panel panel-default" id="tab-general">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                    General Information
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse">
-                          <div class="panel-body">
-                              <form class="form-horizontal" role="form" id="tab-general-form">
-                                <div class="form-group">
-                                    <label for="tab-general-field-1" class="col-sm-2 control-label">Service Name</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="tab-general-field-1" placeholder="Enter Placeholder Text">
+
+
+                              <div class="panel panel-default" id="tab-general">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                        General Information
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <form class="form-horizontal" role="form" id="tab-general-form">
+                                    <div class="form-group">
+                                        <label for="tab-general-field-1" class="col-sm-2 control-label">Service Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="tab-general-field-1" placeholder="Enter Placeholder Text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="tab-general-field-2" class="col-sm-2 control-label">Service Description</label>
-                                    <div class="col-sm-10">
-                                        <textarea rows="5" cols="5" class="form-control" id="tab-general-field-2" name="tab-general-field-2" title="Please enter service description." required></textarea>
+                                    <div class="form-group">
+                                        <label for="tab-general-field-2" class="col-sm-2 control-label">Service Description</label>
+                                        <div class="col-sm-10">
+                                            <textarea rows="5" cols="5" class="form-control" id="tab-general-field-2" name="tab-general-field-2" title="Please enter service description." required></textarea>
+                                        </div>
                                     </div>
-                                </div>
 
 
-                                <div class="form-group">
-                                    <legend>Operating Hours:</legend>
-                                    <div class="range-head">
-                                        <div class="range-values">
-                                          <span class="r-0"><strong>0:00</strong></span>
-                                          <span class="r-3"><strong>3:00</strong></span>
-                                          <span class="r-6"><strong>6:00</strong></span>
-                                          <span class="r-9"><strong>9:00</strong></span>
-                                          <span class="r-12"><strong>12:00</strong></span>
-                                          <span class="r-15"><strong>15:00</strong></span>
-                                          <span class="r-18"><strong>18:00</strong></span>
-                                          <span class="r-21"><strong>21:00</strong></span>
-                                          <span class="r-24"><strong>24:00</strong></span>
+                                    <div class="form-group">
+                                        <legend>Operating Hours:</legend>
+                                        <div class="range-head">
+                                            <div class="range-values">
+                                              <span class="r-0"><strong>0:00</strong></span>
+                                              <span class="r-3"><strong>3:00</strong></span>
+                                              <span class="r-6"><strong>6:00</strong></span>
+                                              <span class="r-9"><strong>9:00</strong></span>
+                                              <span class="r-12"><strong>12:00</strong></span>
+                                              <span class="r-15"><strong>15:00</strong></span>
+                                              <span class="r-18"><strong>18:00</strong></span>
+                                              <span class="r-21"><strong>21:00</strong></span>
+                                              <span class="r-24"><strong>24:00</strong></span>
+                                          </div>
                                       </div>
-                                  </div>
 
-                                  <div class="range-day" id="range-day-1" data-day="1">
-                                    <input type="checkbox" name="day-1" id="day-1" value="1" class="range-checkbox" checked>
-                                    <label for="day-1" class="range-label">Monday:</label>
-                                    <div id="range-slider-1" class="range-slider"></div>
-                                    <span id="range-time-1" class="range-time"></span>
+                                      <div class="range-day" id="range-day-1" data-day="1">
+                                        <input type="checkbox" name="day-1" id="day-1" value="1" class="range-checkbox" checked>
+                                        <label for="day-1" class="range-label">Monday:</label>
+                                        <div id="range-slider-1" class="range-slider"></div>
+                                        <span id="range-time-1" class="range-time"></span>
+                                    </div>
+
+                                    <div class="range-day" id="range-day-2" data-day="2">
+                                        <input type="checkbox" name="day-2" id="day-2" value="1" class="range-checkbox" checked>
+                                        <label for="day-2" class="range-label">Tuesday:</label>
+                                        <div id="range-slider-2" class="range-slider"></div>
+                                        <span id="range-time-2" class="range-time"></span>
+                                    </div>
+
+                                    <div class="range-day" id="range-day-3" data-day="3">
+                                        <input type="checkbox" name="day-3" id="day-3" value="1" class="range-checkbox" checked>
+                                        <label for="day-3" class="range-label">Wednesday:</label>  
+                                        <div id="range-slider-3" class="range-slider"></div>
+                                        <span id="range-time-3" class="range-time"></span>
+                                    </div>
+
+                                    <div class="range-day" id="range-day-4" data-day="4">
+                                        <input type="checkbox" name="day-4" id="day-4" value="1" class="range-checkbox" checked>
+                                        <label for="day-4" class="range-label">Thursday‎:</label>  
+                                        <div id="range-slider-4" class="range-slider"></div>
+                                        <span id="range-time-4" class="range-time"></span>
+                                    </div>
+
+                                    <div class="range-day" id="range-day-5" data-day="5">
+                                        <input type="checkbox" name="day-5" id="day-5" value="1" class="range-checkbox" checked>
+                                        <label for="day-5" class="range-label">Friday:</label>  
+                                        <div id="range-slider-5" class="range-slider"></div>
+                                        <span id="range-time-5" class="range-time"></span>
+                                    </div>
+
+                                    <div class="range-day" id="range-day-6" data-day="6">
+                                        <input type="checkbox" name="day-6" id="day-6" value="1" class="range-checkbox" checked>
+                                        <label for="day-6" class="range-label">Saturday:</label>  
+                                        <div id="range-slider-6" class="range-slider"></div>
+                                        <span id="range-time-6" class="range-time"></span>
+                                    </div>
+
+                                    <div class="range-day" id="range-day-7" data-day="7">
+                                        <input type="checkbox" name="day-7" id="day-7" value="1" class="range-checkbox">
+                                        <label for="day-7" class="range-label">Sunday:</label>  
+                                        <div id="range-slider-7" class="range-slider"></div>
+                                        <span id="range-time-7" class="range-time"></span>
+                                    </div>
+
                                 </div>
+                            </form>      </div>
+                        </div>
+                    </div> <!--first-->
 
-                                <div class="range-day" id="range-day-2" data-day="2">
-                                    <input type="checkbox" name="day-2" id="day-2" value="1" class="range-checkbox" checked>
-                                    <label for="day-2" class="range-label">Tuesday:</label>
-                                    <div id="range-slider-2" class="range-slider"></div>
-                                    <span id="range-time-2" class="range-time"></span>
-                                </div>
 
-                                <div class="range-day" id="range-day-3" data-day="3">
-                                    <input type="checkbox" name="day-3" id="day-3" value="1" class="range-checkbox" checked>
-                                    <label for="day-3" class="range-label">Wednesday:</label>  
-                                    <div id="range-slider-3" class="range-slider"></div>
-                                    <span id="range-time-3" class="range-time"></span>
-                                </div>
-
-                                <div class="range-day" id="range-day-4" data-day="4">
-                                    <input type="checkbox" name="day-4" id="day-4" value="1" class="range-checkbox" checked>
-                                    <label for="day-4" class="range-label">Thursday‎:</label>  
-                                    <div id="range-slider-4" class="range-slider"></div>
-                                    <span id="range-time-4" class="range-time"></span>
-                                </div>
-
-                                <div class="range-day" id="range-day-5" data-day="5">
-                                    <input type="checkbox" name="day-5" id="day-5" value="1" class="range-checkbox" checked>
-                                    <label for="day-5" class="range-label">Friday:</label>  
-                                    <div id="range-slider-5" class="range-slider"></div>
-                                    <span id="range-time-5" class="range-time"></span>
-                                </div>
-
-                                <div class="range-day" id="range-day-6" data-day="6">
-                                    <input type="checkbox" name="day-6" id="day-6" value="1" class="range-checkbox" checked>
-                                    <label for="day-6" class="range-label">Saturday:</label>  
-                                    <div id="range-slider-6" class="range-slider"></div>
-                                    <span id="range-time-6" class="range-time"></span>
-                                </div>
-
-                                <div class="range-day" id="range-day-7" data-day="7">
-                                    <input type="checkbox" name="day-7" id="day-7" value="1" class="range-checkbox">
-                                    <label for="day-7" class="range-label">Sunday:</label>  
-                                    <div id="range-slider-7" class="range-slider"></div>
-                                    <span id="range-time-7" class="range-time"></span>
-                                </div>
-
-                            </div>
-                        </form>      </div>
+                    <div class="panel panel-default" id="tab-eligibility">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                Passenger Eligibility
+                            </a>
+                        </h4>
                     </div>
-                </div> <!--first-->
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <form class="form" role="form" id="tab-eligibility-form">
 
-
-                <div class="panel panel-default" id="tab-eligibility">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                            Passenger Eligibility
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                    <form class="form" role="form" id="tab-eligibility-form">
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <legend>Select eligible passenger types:</legend>
-                                
+                            <div class="row">
                                 <div class="col-md-12">
+                                    <legend>Select eligible passenger types:</legend>
 
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-1">
-                                                <input type="checkbox" id="tab-eligibility-field-1"> Under 16 years of age
-                                            </label>                
-                                        </div>                                    
-                                    </div>
+                                    <div class="col-md-12">
 
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-2">
-                                                <input type="checkbox" id="tab-eligibility-field-2"> 17 to 21 years of age
-                                            </label>                                        
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-1">
+                                                    <input type="checkbox" id="tab-eligibility-field-1"> Under 16 years of age
+                                                </label>                
+                                            </div>                                    
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-3">
-                                                <input type="checkbox" id="tab-eligibility-field-3"> 22 to 54 years of age
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-4">
-                                            <input type="checkbox" id="tab-eligibility-field-4"> 55 to 59 years of age
-                                        </label>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-5">
-                                            <input type="checkbox" id="tab-eligibility-field-5"> 60 years or above
-                                        </label>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-2">
+                                                    <input type="checkbox" id="tab-eligibility-field-2"> 17 to 21 years of age
+                                                </label>                                        
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-3">
+                                                    <input type="checkbox" id="tab-eligibility-field-3"> 22 to 54 years of age
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-4">
+                                                    <input type="checkbox" id="tab-eligibility-field-4"> 55 to 59 years of age
+                                                </label>
+                                            </div>
+                                        </div>
 
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-5">
-                                            <input type="checkbox" id="tab-eligibility-field-5"> Able bodied
-                                        </label>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-5">
+                                                    <input type="checkbox" id="tab-eligibility-field-5"> 60 years or above
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-6">
-                                            <input type="checkbox" id="tab-eligibility-field-6"> Mobility prevents use of regular PT
-                                        </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-7">
-                                            <input type="checkbox" id="tab-eligibility-field-7"> Disabled wheelchair user
 
-                                        </label>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-5">
+                                                    <input type="checkbox" id="tab-eligibility-field-5"> Able bodied
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-6">
+                                                    <input type="checkbox" id="tab-eligibility-field-6"> Mobility prevents use of regular PT
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-7">
+                                                    <input type="checkbox" id="tab-eligibility-field-7"> Disabled wheelchair user
+
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-8">
+                                                    <input type="checkbox" id="tab-eligibility-field-8"> Disabled other
+                                                </label>
+                                            </div>
+                                            <input type="text" id="tab-eligibility-field-8-text" class="form-control" placeholder="Enter disability type">
+
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <legend>Select journey purpose types:</legend>
 
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-8">
-                                            <input type="checkbox" id="tab-eligibility-field-8-text"> Disabled other
-                                        </label>
+                                    <div class="col-md-12">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-9">
+                                                    <input type="checkbox" id="tab-eligibility-field-9"> Health Appointment
+                                                </label>                
+                                            </div>                                    
                                         </div>
-                                        <input type="text" id="tab-general-field-8" class="form-control" placeholder="Enter disability type">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-10">
+                                                    <input type="checkbox" id="tab-eligibility-field-10"> Social Care
+                                                </label>                                        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-11">
+                                                    <input type="checkbox" id="tab-eligibility-field-11"> Shopping
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-12">
+                                                    <input type="checkbox" id="tab-eligibility-field-12"> Leisure/Visiting Family
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-13">
+                                                    <input type="checkbox" id="tab-eligibility-field-13"> School/Education
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label label-default="" for="tab-eligibility-field-14">
+                                                    <input type="checkbox" id="tab-eligibility-field-14"> Work/Commuting
+                                                </label>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-<br/>
-                                                <div class="row">
-                            <div class="col-md-12">
-                                <legend>Select journey purpose types:</legend>
-                                
-                                <div class="col-md-12">
+                        </form>
+                    </div> <!--panel body-->
+                </div> <!--collapse3-->
+            </div> <!--panel-->
 
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-9">
-                                                <input type="checkbox" id="tab-eligibility-field-9"> Health Appointment
-                                            </label>                
-                                        </div>                                    
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-10">
-                                                <input type="checkbox" id="tab-eligibility-field-10"> Social Care
-                                            </label>                                        
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-11">
-                                                <input type="checkbox" id="tab-eligibility-field-11"> Shopping
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-12">
-                                            <input type="checkbox" id="tab-eligibility-field-12"> Leisure/Visiting Family
-                                        </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label label-default="" for="tab-eligibility-field-12">
-                                            <input type="checkbox" id="tab-eligibility-field-12"> 60 years or above
-                                        </label>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div> <!--panel body-->
-            </div>
 
             <div class="panel panel-default" id="tab-fare-structure">
                 <div class="panel-heading">
@@ -323,23 +335,84 @@
                 <div class="form-group">
                     <label for="tab-fare-structure-field-1" class=" control-label"> Do you charge fare?</label>
 
-                            <div class="form-group"> <!--form group for radio buttons-->
-                              <label>
-                                <input type="radio" name="tab-fare-structure-radioBtns" id="radio1" value="0" checked>
-                                Yes
-                            </label>
+                    <div class="form-group"> <!--form group for radio buttons-->
+                      <label class="col-md-2">
+                        <input type="radio" name="tab-fare-structure-radioBtns" id="radio1" value="0" checked>
+                        Yes
+                    </label>
 
-                          <label>
-                            <input type="radio" name="tab-fare-structure-radioBtns" id="radio2" value="1">
-                            No
-                        </label>
-                    </div> <!--form group for radio buttons-->
+                    <label>
+                        <input type="radio" name="tab-fare-structure-radioBtns" id="radio2" value="1">
+                        No
+                    </label>
+                </div> <!--form group for radio buttons-->
+            </div>
 
+            <form class="form-inline" role="form" id="tab-fare-structure-form">
+                <div class="row col-md-10">
+                    <div class="form-group">
+                        <label for="tab-fare-structure-field-1" class="col-sm-6 control-label">Basic Fare</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">£</span>
+                            <input type="text" class="form-control" placeholder="0.0" id="tab-fare-structure-field-1">
+                            <span class="input-group-addon">per mile</span>
+
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div class="form-group">
+                        <label for="tab-fare-structure-field-2" class="col-sm-6 control-label">Extra Fare</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">£</span>
+                            <input type="text" class="form-control" placeholder="0.0" id="tab-fare-structure-field-2">
+                            <span class="input-group-addon">per mile</span>
+                        </div>
+                    </div>
 
                 </div>
-            </div>
-        </div>
-    </div>
+            </form>
+        </div> <!--panel body-->
+    </div> <!--collapse3-->
+</div> <!--panel-->
+
+
+<div class="panel panel-default" id="tab-surcharge-structure">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                      Surcharge Structure
+                  </a>
+              </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse in">
+              <div class="panel-body">
+            <form class="form-inline" role="form" id="tab-surcharge-structure-form">
+                <div class="row col-md-10">
+                    <div class="form-group">
+                        <label for="tab-surcharge-structure-field-1" class="col-sm-6 control-label">Basic Fare</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">£</span>
+                            <input type="text" class="form-control" placeholder="0.0" id="tab-surcharge-structure-field-1">
+                            <span class="input-group-addon">per mile</span>
+
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div class="form-group">
+                        <label for="tab-surcharge-structure-field-2" class="col-sm-6 control-label">Extra Fare</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">£</span>
+                            <input type="text" class="form-control" placeholder="0.0" id="tab-surcharge-structure-field-2">
+                            <span class="input-group-addon">per mile</span>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div> <!--panel body-->
+    </div> <!--collapse3-->
+</div> <!--panel-->
+
 </div>
 </div>
 </div>
@@ -352,7 +425,7 @@
 </div>
 <div id="footer">
 
-   <p id="copyright">
+ <p id="copyright">
     <span>&copy; Copyright 2013 - University of Aberdeen <br />Flexible Integrated Transport System Project<br />
         MacRobert Building, King's College, Aberdeen, AB24 5UA<br />
         t: +44 (0) 1224 274065 e: fits@abdn.ac.uk
