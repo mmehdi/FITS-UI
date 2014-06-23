@@ -12,18 +12,39 @@ $("#tab-fare-structure-form-radioBtns").change();
     });
 
 
-  $('#tab-eligibility-field-8-text').hide();
+  $('#tab-eligibility-field-9-text').hide();
 
-  $('#tab-eligibility-field-8').change(function() {
+  $('#tab-eligibility-field-9').change(function() {
       if (this.checked) {
-          $('#tab-eligibility-field-8-text').fadeIn('slow');
+          $('#tab-eligibility-field-9-text').fadeIn('slow');
       }
       else {
-        $('#tab-eligibility-field-8-text').fadeOut('slow');
+        $('#tab-eligibility-field-9-text').fadeOut('slow');
       }
   });
 
-    
+  
+  //show hide surcharge fields depending on selection in passenger eligibility
+
+   $("input[name='eligible-checkbox']").each( function () {
+        var value = $(this).val();
+        var passenger_elig_id = 'tab-surcharge-structure-pt-group-'+value;
+        if(this.checked)
+          $('#'+passenger_elig_id).hide();
+        else
+          $('#'+passenger_elig_id).show();
+   });
+
+     $("input[name='eligible-checkbox']").click(function() {
+        //var id = $(this).attr('id');
+        var value = $(this).val();
+        var passenger_elig_id = 'tab-surcharge-structure-pt-group-'+value;
+        if(this.checked)
+          $('#'+passenger_elig_id).hide();
+        else
+          $('#'+passenger_elig_id).show();
+      });
+
 });
 
 

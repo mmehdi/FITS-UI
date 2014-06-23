@@ -79,3 +79,21 @@ body {
 .range-values,#schedule,h1 {
   margin-left: 143px;
 }
+
+
+/*inline form*/
+.form-inline-row {
+    margin-top: 25px;
+}
+.form-inline-row  .form-group > div.col-xs-8 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.form-inline-row  label {
+    line-height: 34px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.form-inline-row .form-control {
+    width: 100%;
+}
