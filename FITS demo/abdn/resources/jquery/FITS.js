@@ -23,7 +23,17 @@ $("#tab-fare-structure-form-radioBtns").change();
       }
   });
 
-  
+    $('#tab-eligibility-field-16-text').hide();
+
+  $('#tab-eligibility-field-16').change(function() {
+      if (this.checked) {
+          $('#tab-eligibility-field-16-text').fadeIn('slow');
+      }
+      else {
+        $('#tab-eligibility-field-16-text').fadeOut('slow');
+      }
+  });
+
   //show hide surcharge fields depending on selection in passenger eligibility
 
    $("input[name='eligible-checkbox']").each( function () {
