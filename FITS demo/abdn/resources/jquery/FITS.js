@@ -57,10 +57,9 @@ $("#tab-fare-structure-form-radioBtns").change();
 
 });
 
-
 //range slider
 $(document).ready(function() {
-	
+
 var rangeTimes = [];
 
 $(".range-slider").slider({
@@ -68,7 +67,7 @@ $(".range-slider").slider({
     min: 0,
     max: 1440,
     values: [540, 1080],
-    step:30,
+    step:15,
     slide: slideTime,
     change: updateOpeningHours
 	});
@@ -123,17 +122,18 @@ $(".range-slider").slider({
 	    <thead>\
 		    <tr>\
           <th>Day</th>\
-			    <th>Start Time</th>\
-			    <th>End Time</th>\
+			    <th>Opening Time</th>\
+			    <th>Closing Time</th>\
 		    </tr>\
 	    </thead>\
 	    <tbody>\
 	    </tbody>\
       </table>');
     }
+    var days = {1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",7:"Sunday"};
     for (d=1; d<=7; d++) {
       $('#schedule tbody').append('<tr>'+
-			   '<td>'+d+'</td>'+
+			   '<td>'+days[d]+'</td>'+
 			   '<td>'+(rangeTimes[d][0]===undefined?'Closed':rangeTimes[d][0])+'</td>'+
          '<td>'+(rangeTimes[d][1]===undefined?'':rangeTimes[d][1])+'</td>'+
 			'</tr>');
@@ -146,7 +146,11 @@ $(".range-slider").slider({
 		if (minutes.length == 1) {
       minutes = "0" + minutes;
 		}
-		return hours + ":" + minutes;
+
+    //make number two digits 01,02 etc
+    hours =  hours > 9 ? "" + hours: "0" + hours;
+		
+    return hours + ":" + minutes;
 	}
 
   $('.range-checkbox').on('change', function(){
@@ -166,5 +170,14 @@ slideTime({target:$('#range-slider-5')});
 slideTime({target:$('#range-slider-6')});
 slideTime({target:$('#range-slider-7')});
 updateOpeningHours();
+
 });
 //range slider end
+
+
+$(document).ready(function() {
+// initialize google map
+BlitzMap.setMap( 'myMap', true, 'mapData' );
+BlitzMap.init();// initialize BlitzMap
+$('#myMap').show();
+});

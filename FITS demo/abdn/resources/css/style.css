@@ -80,6 +80,9 @@ body {
   margin-left: 143px;
 }
 
+.form-row{
+    margin-bottom: 10px !important;
+}
 
 /*inline form*/
 .form-inline-row {
