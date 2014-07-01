@@ -100,3 +100,11 @@ body {
 .form-inline-row .form-control {
     width: 100%;
 }
+
+.summary-label{
+    margin: 0px !important;
+}
+
+.input-disabled{
+  opacity: 0.5;
+}

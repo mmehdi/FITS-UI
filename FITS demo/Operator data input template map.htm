@@ -106,6 +106,9 @@
                 <div class="container">
 				
                     <div class="row">
+
+        <form action="input-preview.html" method="post" role="form"> 
+
             <div class="col-md-10 col-lg-8">
                <div class="panel-group" id="accordion">
 
@@ -118,8 +121,8 @@
                     </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse">
-                  <div class="panel-body">
-                      <form class="form-horizontal" role="form" id="tab-general-form">
+                  <div class="panel-body" id="tab-general-form">
+                      <!--form class="form-horizontal" role="form" id="tab-general-form"-->
                         <div class="form-group">
                             <label for="tab-general-field-1" class="col-sm-2 control-label">Service Name</label>
                             <div class="col-sm-10">
@@ -203,7 +206,13 @@
                     </div>
 
                 </div>
-            </form>      </div>
+            <!--/form-->      
+
+            <div class="input-group col-md-offset-9 col-sm-offset-9 col-xs-offset-9">
+            <button type="button" class="btn btn-info">Save this section</button>
+            </div><!--save clear button-->
+
+        </div>
         </div>
     </div> <!--first-->
     
@@ -219,7 +228,7 @@
     </div>
     <div id="collapseTwo" class="panel-collapse collapse in">
       <div class="panel-body">
-         <form class="form form-inline" role="form" id="tab-operating-area-form">
+         <!--form class="form form-inline" role="form" id="tab-operating-area-form"-->
 
             <div class="form-inline-row">
                 <div class="col-md-12">
@@ -229,8 +238,16 @@
 				
 					<input type="button" style="margin: 10 0 0 0" value="Generate JSON Text" onclick="BlitzMap.toJSONString()" />
 					<!--  <input type="button" value="Create Map from JSON" onclick="BlitzMap.setMap( 'myMap', true, 'mapData' ); BlitzMap.init()" /> -->
-					<input type="button" id = "clearMap" style = "margin: 10 0 0 0;float:right;" value="clear" onclick="BlitzMap.deleteAll();" />
-					<input type="button" id = "editMap" style = "margin: 10 0 0 0;float:right;width:45px;" value="save"  onclick="editMap();"/>
+					
+
+                     <div class="input-group col-md-offset-9 col-sm-offset-9 col-xs-offset-9">
+            <button type="button" class="btn btn-info" id = "editMap" onclick="editMap();">Save</button>
+
+            <button style="margin-left:30px;" type="button" class="btn btn-danger" id = "clearMap" onclick="BlitzMap.deleteAll();">Clear</button>
+            </div><!--save clear button-->
+
+                    <!--input type="button" id = "clearMap" style = "margin: 10 0 0 0;float:right;" value="clear" onclick="BlitzMap.deleteAll();" /-->
+					<!--input type="button" id = "editMap" style = "margin: 10 0 0 0;float:right;width:45px;" value="save"  onclick="editMap();"/-->
 					
 					<textarea id="mapData" style="display:none;">
 					</textarea>
@@ -245,7 +262,7 @@
             <br/>
 
             
-        </form>
+        <!--/form-->
     </div> <!--panel body-->
 </div> <!---->
 </div> <!--panel-->
@@ -261,7 +278,7 @@
     </div>
     <div id="collapseThree" class="panel-collapse collapse">
       <div class="panel-body">
-         <form class="form" role="form" id="tab-surcharge-structure-form">
+         <!--form class="form" role="form" id="tab-surcharge-structure-form"-->
 
                 <div class="col-lg-12 col-md-12">
                     <fieldset>
@@ -400,7 +417,12 @@
 
                     </fieldset>
                 </div>
-        </form>
+        <!--/form-->
+
+            <div class="input-group col-md-offset-9 col-sm-offset-9 col-xs-offset-9">
+            <button type="button" class="btn btn-info">Save this section</button>
+            </div><!--save clear button-->
+
     </div> <!--panel body-->
 </div> <!--collapse3-->
 </div> <!--panel-->
@@ -432,7 +454,7 @@
         </div> <!--form group for radio buttons-->
     </div>
 
-    <form class="form" role="form" id="tab-fare-structure-form">
+    <!--form class="form" role="form" id="tab-fare-structure-form"-->
             <div class="col-lg-12 col-md-12">
             <fieldset>
                 <legend>Distance:</legend>
@@ -440,9 +462,7 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--1st column-->
 
                         <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                            <label for="tab-fare-structure-dist-field-1" class="col-sm-6 col-xs-6 col-md-6">
-                                <input type="checkbox" name="fare-checkbox" id="tab-fare-dist-field-1" value="1"> 0-1 mile:
-                            </label>
+                            <label for="tab-fare-structure-dist-field-1" class="col-sm-6 col-xs-6 col-md-6">0-1 mile:</label>
                             <div class="col-xs-4">
                                 <input type="text" class="form-control" id="tab-fare-structure-dist-field-1" placeholder="£0.0">
                             </div>
@@ -568,7 +588,12 @@
 
 
 
-</form>
+            <!--/form-->
+
+            <div class="input-group col-md-offset-9 col-sm-offset-9 col-xs-offset-9">
+            <button type="button" class="btn btn-info">Save this section</button>
+            </div><!--save clear button-->
+
 </div> <!--panel body-->
 </div> <!--collapse3-->
 </div> <!--panel-->
@@ -582,10 +607,10 @@
       </a>
   </h4>
 </div>
-<div id="collapseFive" class="panel-collapse collapse in">
+<div id="collapseFive" class="panel-collapse collapse">
   <div class="panel-body">
    <p> <h2> Disutilities</h2></span>Please enter your penalty surcharges for operating outside of your usual boundaries and operating time, and for transporting passengers not of your prefered usual types </span></p>
-   <form class="form form-inline-row" role="form" id="tab-surcharge-structure-form">
+   <!--form class="form form-inline-row" role="form" id="tab-surcharge-structure-form"-->
 
             <div class="col-lg-12 col-md-12">
             <fieldset>
@@ -593,40 +618,48 @@
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--1st column-->
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12 input-disabled" id="tab-surcharge-dist-field-1-group">
                             <label for="tab-surcharge-structure-dist-field-1" class="col-sm-6 col-xs-6 col-md-6">
-                                <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-1" value="1"> 0-1 mile:
+                                <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-1"> 0-1 mile:
                             </label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-1" placeholder="£0.0">
+                                <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-1-input" placeholder="£0.0">
                             </div>
                         </div>
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                            <label for="tab-surcharge-structure-dist-field-2" class="col-sm-6 col-xs-6 col-md-6">2-3 miles:</label>
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-dist-field-2-group">
+                            <label for="tab-surcharge-structure-dist-field-2" class="col-sm-6 col-xs-6 col-md-6">
+                                <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-2"> 2-3 miles:
+                            </label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-2" placeholder="£0.0">
+                                <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-2-input" placeholder="£0.0">
                             </div>
                         </div>
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                          <label for="tab-surcharge-structure-dist-field-3" class="col-sm-6 col-xs-6 col-md-6">4-5 miles:</label>
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-dist-field-3-group">
+                          <label for="tab-surcharge-structure-dist-field-3" class="col-sm-6 col-xs-6 col-md-6">
+                            <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-3"> 4-5 miles:
+                        </label>
                           <div class="col-xs-4">
-                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-3" placeholder="£0.0">
+                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-3-input" placeholder="£0.0">
                         </div>
                         </div>
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                          <label for="tab-surcharge-structure-dist-field-4" class="col-sm-6 col-xs-6 col-md-6">6-7 miles:</label>
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-dist-field-4-group">
+                          <label for="tab-surcharge-structure-dist-field-4" class="col-sm-6 col-xs-6 col-md-6">
+                            <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-4"> 6-7 miles:
+                        </label>
                           <div class="col-xs-4">
-                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-4" placeholder="£0.0">
+                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-4-input" placeholder="£0.0">
                             </div>
                         </div>
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                          <label for="tab-surcharge-structure-dist-field-5" class="col-sm-6 col-xs-6 col-md-6">8-10 miles:</label>
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-dist-field-5-group">
+                          <label for="tab-surcharge-structure-dist-field-5" class="col-sm-6 col-xs-6 col-md-6">
+                            <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-5"> 8-10 miles:
+                        </label>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-5" placeholder="£0.0">
+                                <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-5-input" placeholder="£0.0">
                              </div>
                          </div>
                     
@@ -636,39 +669,47 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--2nd column-->
 
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                          <label for="tab-surcharge-structure-dist-field-6" class="col-sm-6 col-xs-6 col-md-6">11-15 miles:</label>
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-dist-field-6-group">
+                          <label for="tab-surcharge-structure-dist-field-6" class="col-sm-6 col-xs-6 col-md-6">
+                            <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-6"> 11-15 miles:
+                        </label>
                           <div class="col-xs-4">
-                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-6" placeholder="£0.0">
+                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-6-input" placeholder="£0.0">
                         </div>
                         </div>
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                          <label for="tab-surcharge-structure-dist-field-7" class="col-sm-6 col-xs-6 col-md-6">16-20 miles:</label>
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-dist-field-7-group">
+                          <label for="tab-surcharge-structure-dist-field-7" class="col-sm-6 col-xs-6 col-md-6">
+                            <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-7"> 16-20 miles:
+                        </label>
                           <div class="col-xs-4">
-                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-7" placeholder="£0.0">
+                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-7-input" placeholder="£0.0">
                         </div>
                         </div>
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                          <label for="tab-surcharge-structure-dist-field-7" class="col-sm-6 col-xs-6 col-md-6">21-30 miles:</label>
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-dist-field-8-group">
+                          <label for="tab-surcharge-structure-dist-field-8" class="col-sm-6 col-xs-6 col-md-6">
+                            <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-8"> 21-30 miles:
+                        </label>
                           <div class="col-xs-4">
-                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-7" placeholder="£0.0">
+                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-8-input" placeholder="£0.0">
                         </div>
                         </div>
 
 
-                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12">
-                          <label for="tab-surcharge-structure-dist-field-8" class="col-sm-6 col-xs-6 col-md-6">Over 30 miles:</label>
+                        <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-dist-field-9-group">
+                          <label for="tab-surcharge-structure-dist-field-9" class="col-sm-6 col-xs-6 col-md-6">
+                            <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-dist-field-9"> Over 30 miles:
+                        </label>
                           <div class="col-xs-4">
-                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-8" placeholder="£0.0">
+                            <input type="text" class="form-control" id="tab-surcharge-structure-dist-field-9-input" placeholder="£0.0">
                         </div>
                         </div>
 
                         </div><!--2nd column-->
 
                           </fieldset>
-                        </div>
+            </div>
 
 
             <!--div class="col-lg-12 col-md-12">
@@ -721,196 +762,296 @@
                         </div-->
 
 
-<br/>
-<div class="form-inline-row">
-    <div class="col-md-12">
-        <fieldset>
 
-            <legend>Passenger Types:</legend>
+            <div class="col-lg-12 col-md-12">
+            <fieldset>
+            <legend>Passenger age group:</legend>
 
-            <div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-1">
-                <label for="tab-surcharge-structure-pt-field-1" class="col-xs-6">Under 16 years of age:</label>
-                <div class="col-xs-4">
-                    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-1" placeholder="£0.0">
-                </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--1st column-->
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-1-group">
+                     <label for="tab-surcharge-structure-pt-field-1" class="col-sm-6 col-xs-6 col-md-6"> 
+                        <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-1"> Under 16 years of age:
+                    </label>
+                    <div class="col-xs-4">
+                      <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-1-input" placeholder="£0.0">
+                     </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-2-group">
+                     <label for="tab-surcharge-structure-pt-field-2" class="col-sm-6 col-xs-6 col-md-6"> 
+                        <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-2"> 17 to 21 years of age:
+                    </label>
+                     <div class="col-xs-4">
+                         <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-2-input" placeholder="£0.0">
+                  </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-3-group">
+                      <label for="tab-surcharge-structure-pt-field-3" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-3"> 22 to 54 years of age:
+                  </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-3-input" placeholder="£0.0">
+                    </div>
+                    </div>
+
+                     </div><!--1st column-->
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--2nd column-->
+                   
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-4-group">
+                      <label for="tab-surcharge-structure-pt-field-4" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-4"> 55 to 59 years of age:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-4-input" placeholder="£0.0">
+                    </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-5-group">
+                      <label for="tab-surcharge-structure-pt-field-5" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-5"> 60 years or above:
+                  </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-5-input" placeholder="£0.0">
+                    </div>
+                    </div>
+                
+                    </div> <!--2nd column-->
+
+                </fieldset>
             </div>
 
-            <div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-2">
-              <label for="tab-surcharge-structure-pt-field-2" class="col-xs-6">17 to 21 years of age:</label>
-              <div class="col-xs-4">
-                <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-2" placeholder="£0.0">
+
+
+        <div class="col-lg-12 col-md-12">
+            <fieldset>
+            <legend>Passenger mobility status:</legend>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--1st column-->
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-6-group">
+                      <label for="tab-surcharge-structure-pt-field-6" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-6"> Able bodied:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-6-input" placeholder="£0.0">
+                    </div>
+                    </div>
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-7-group">
+                      <label for="tab-surcharge-structure-pt-field-7" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-7"> Mobility prevents use of:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-7-input" placeholder="£0.0">
+                    </div>
+                    </div>
+
+                     </div><!--1st column-->
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--2nd column-->
+                   
+                   <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-8-group">
+                      <label for="tab-surcharge-structure-pt-field-8" class="col-sm-6 col-xs-6 col-md-6">
+                      v<input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-8"> Disabled wheelchair user:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-8-input" placeholder="£0.0">
+                    </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-9-group">
+                      <label for="tab-surcharge-structure-pt-field-9" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-9"> Disabled other:
+                       </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-9-input" placeholder="£0.0">
+                    </div>
+                    </div>
+                
+                    </div> <!--2nd column-->
+
+                </fieldset>
             </div>
-        </div>
+       
+        <div class="col-lg-12 col-md-12">
+            <fieldset>
+            <legend>Passenger journey purpose:</legend>
 
-        <div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-3">
-          <label for="tab-surcharge-structure-pt-field-3" class="col-xs-6">22 to 54 years of age:</label>
-          <div class="col-xs-4">
-            <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-3" placeholder="£0.0">
-        </div>
-    </div>
-    <div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-4">
-      <label for="tab-surcharge-structure-pt-field-4" class="col-xs-6">55 to 59 years of age:</label>
-      <div class="col-xs-4">
-        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-4" placeholder="£0.0">
-    </div>
-</div>
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-5">
-  <label for="tab-surcharge-structure-pt-field-5" class="col-xs-6">60 years or above:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-5" placeholder="£0.0">
-</div>
-</div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--1st column-->
 
-<div class="form-group col-lg-12 col-sm-10">
-<!--just for line spacing-->
-</div>
-
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-6">
-  <label for="tab-surcharge-structure-pt-field-6" class="col-xs-6">Able bodied:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-6" placeholder="£0.0">
-</div>
-</div>
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-7">
-  <label for="tab-surcharge-structure-pt-field-7" class="col-xs-6">Mobility prevents use of:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-7" placeholder="£0.0">
-</div>
-</div>
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-8">
-  <label for="tab-surcharge-structure-pt-field-8" class="col-xs-6">Disabled wheelchair user:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-8" placeholder="£0.0">
-</div>
-</div>
-
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-9">
-  <label for="tab-surcharge-structure-pt-field-9" class="col-xs-6">Disabled other: </label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-9" placeholder="£0.0">
-</div>
-</div>
-
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-10">
-  <label for="tab-surcharge-structure-pt-field-10" class="col-xs-6">Health Appointment:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-10" placeholder="£0.0">
-</div>
-</div>
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-10-group">
+                      <label for="tab-surcharge-structure-pt-field-10" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-10"> Health Appointment:
+                  </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-10-input" placeholder="£0.0">
+                    </div>
+                    </div>
 
 
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-11">
-  <label for="tab-surcharge-structure-pt-field-11" class="col-xs-6">Social Care:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-11" placeholder="£0.0">
-</div>
-</div>
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-11-group">
+                      <label for="tab-surcharge-structure-pt-field-11" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-11"> Social Care:
+                  </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-11-input" placeholder="£0.0">
+                    </div>
+                    </div>
 
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-12">
-  <label for="tab-surcharge-structure-pt-field-12" class="col-xs-6">Shopping:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-12" placeholder="£0.0">
-</div>
-</div>
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-12-group">
+                      <label for="tab-surcharge-structure-pt-field-12" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-12"> Shopping:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-12-input" placeholder="£0.0">
+                    </div>
+                    </div>
 
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-13">
-  <label for="tab-surcharge-structure-pt-field-13" class="col-xs-6">Leisure/Visiting Friends:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-13" placeholder="£0.0">
-</div>
-</div>
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-13-group">
+                      <label for="tab-surcharge-structure-pt-field-13" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-13"> Leisure/Visiting Friends:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-13-input" placeholder="£0.0">
+                    </div>
+                    </div>
 
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-14">
-  <label for="tab-surcharge-structure-pt-field-14" class="col-xs-6">School/Education:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-14" placeholder="£0.0">
-</div>
-</div>
+                     </div><!--1st column-->
 
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-15">
-  <label for="tab-surcharge-structure-pt-field-15" class="col-xs-6">Work/Commuting:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-15" placeholder="£0.0">
-</div>
-</div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--2nd column-->
+                   
+                  <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-14-group">
+                      <label for="tab-surcharge-structure-pt-field-14" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-14"> School/Education:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-14-input" placeholder="£0.0">
+                    </div>
+                    </div>
 
-<div class="form-group col-xs-12 col-sm-6 col-lg-6" id="tab-surcharge-structure-pt-group-16">
-  <label for="tab-surcharge-structure-pt-field-16" class="col-xs-6">Other:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-16" placeholder="£0.0">
-</div>
-</div>
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-15-group">
+                      <label for="tab-surcharge-structure-pt-field-15" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-15"> Work/Commuting:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-15-input" placeholder="£0.0">
+                    </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-pt-field-16-group">
+                      <label for="tab-surcharge-structure-pt-field-16" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-pt-field-16"> Other:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-pt-field-16-input" placeholder="£0.0">
+                    </div>
+                    </div>
+
+                
+                    </div> <!--2nd column-->
+
+                </fieldset>
+            </div>
 
 
 
-
-</fieldset>
-
-
-</div>
-</div>
-<br/>
-<div class="form-inline-row">
-    <div class="col-md-12">                
-        <fieldset>
-
+        <div class="col-lg-12 col-md-12">
+            <fieldset>
             <legend>Time:</legend>
 
-            <div class="form-group col-xs-12 col-sm-6 col-lg-6">
-                <label for="tab-surcharge-structure-time-field-1" class="col-xs-6">Start 1 hour earlier:</label>
-                <div class="col-xs-4">
-                    <input type="text" class="form-control" id="tab-surcharge-structure-field-1" placeholder="£0.0">
-                </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--1st column-->
+                        <p class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2"><strong>Opening</strong></p>
+                    
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-time-field-1-group">
+                    <label for="tab-surcharge-structure-time-field-1" class="col-sm-6 col-xs-6 col-md-6"> 
+                         <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-time-field-1"> Start 1 hour earlier:
+                     </label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-time-field-1-input" placeholder="£0.0">
+                    </div>
+                     </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-time-field-2-group">
+                      <label for="tab-surcharge-structure-time-field-2" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-time-field-2"> Start 2 hours earlier:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-time-field-2-input" placeholder="£0.0">
+                    </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-time-field-3-group">
+                      <label for="tab-surcharge-structure-time-field-3" class="col-sm-6 col-xs-6 col-md-6">
+                      <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-time-field-3"> Start 3 hours earlier:
+                    </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-time-field-3-input" placeholder="£0.0">
+                        </div>
+                    </div>
+
+                     </div><!--1st column-->
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"> <!--2nd column-->
+                    <p class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2"><strong>Closing</strong></p>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-time-field-4-group">
+                     <label for="tab-surcharge-structure-time-field-4" class="col-sm-6 col-xs-6 col-md-6">
+                     <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-time-field-4"> Finish 1 hour later:
+                    </label>
+                          <div class="col-xs-4">
+                            <input type="text" class="form-control" id="tab-surcharge-structure-time-field-4-input" placeholder="£0.0">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-time-field-5-group">
+                      <label for="tab-surcharge-structure-time-field-5" class="col-sm-6 col-xs-6 col-md-6"> 
+                        <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-time-field-5"> Finish 2 hours later:
+                        </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-time-field-5-input" placeholder="£0.0">
+                    </div>
+                    </div>
+
+                    <div class="form-group col-lg-12 col-sm-12 col-xs-12 col-md-12" id="tab-surcharge-structure-time-field-6-group">
+                      <label for="tab-surcharge-structure-time-field-6" class="col-sm-6 col-xs-6 col-md-6"> 
+                        <input type="checkbox" name="surcharge-checkbox" id="tab-surcharge-structure-time-field-6"> Finish 3 hours later:
+                        </label>
+                      <div class="col-xs-4">
+                        <input type="text" class="form-control" id="tab-surcharge-structure-time-field-6-input" placeholder="£0.0">
+                    </div>
+                    </div>
+
+                
+                    </div> <!--2nd column-->
+
+                </fieldset>
             </div>
 
-            <div class="form-group col-xs-12 col-sm-6 col-lg-6">
-              <label for="tab-surcharge-structure-time-field-2" class="col-xs-6">Start 2 hours earlier:</label>
-              <div class="col-xs-4">
-                <input type="text" class="form-control" id="tab-surcharge-structure-time-field-2" placeholder="£0.0">
-            </div>
-        </div>
 
-        <div class="form-group col-xs-12 col-sm-6 col-lg-6">
-          <label for="tab-surcharge-structure-time-field-3" class="col-xs-6">Start 3 hours earlier:</label>
-          <div class="col-xs-4">
-            <input type="text" class="form-control" id="tab-surcharge-structure-time-field-3" placeholder="£0.0">
-        </div>
+        <!--/form-->
+
+            <div class="input-group pull-right">
+            <button type="button" class="btn btn-info">Save this section</button>
+            </div><!--save clear button-->
+
+        </div> <!--panel body-->
+        </div> <!--collapse3-->
+        </div> <!--panel-->
+
     </div>
 
-    <div class="form-group col-xs-12 col-sm-6 col-lg-6">
-      <label for="tab-surcharge-structure-time-field-4" class="col-xs-6">Finish 1 hour later:</label>
-      <div class="col-xs-4">
-        <input type="text" class="form-control" id="tab-surcharge-structure-time-field-4" placeholder="£0.0">
+            <div class="input-group pull-left">
+            <button type="submit" class="btn-lg btn-warning">Preview</button>
+            <button class="btn-lg btn-success">Submit</button>
+
+
+            </div><!--save clear button-->
+
     </div>
-</div>
-
-<div class="form-group col-xs-12 col-sm-6 col-lg-6">
-  <label for="tab-surcharge-structure-time-field-5" class="col-xs-6">Finish 2 hours later:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-time-field-5" placeholder="£0.0">
-</div>
-</div>
-
-<div class="form-group col-xs-12 col-sm-6 col-lg-6">
-  <label for="tab-surcharge-structure-time-field-6" class="col-xs-6">Finish 3 hours later:</label>
-  <div class="col-xs-4">
-    <input type="text" class="form-control" id="tab-surcharge-structure-time-field-6" placeholder="£0.0">
-</div>
-</div>
-
-</div>
-
-</fieldset>
-
-</div>
 </form>
-</div> <!--panel body-->
-</div> <!--collapse3-->
-</div> <!--panel-->
 
-</div>
-</div>
-</div>
+    </div>
 <!-- /.row -->
 
 

@@ -38,7 +38,7 @@ $("#tab-fare-structure-form-radioBtns").change();
 
    $("input[name='eligible-checkbox']").each( function () {
         var value = $(this).val();
-        var passenger_elig_id = 'tab-surcharge-structure-pt-group-'+value;
+        var passenger_elig_id = 'tab-surcharge-structure-pt-field-'+value+'group';
         if(this.checked)
           $('#'+passenger_elig_id).hide();
         else
@@ -48,12 +48,60 @@ $("#tab-fare-structure-form-radioBtns").change();
      $("input[name='eligible-checkbox']").click(function() {
         //var id = $(this).attr('id');
         var value = $(this).val();
-        var passenger_elig_id = 'tab-surcharge-structure-pt-group-'+value;
+        var passenger_elig_id = 'tab-surcharge-structure-pt-field-'+value+'-group';
         if(this.checked)
           $('#'+passenger_elig_id).hide();
         else
           $('#'+passenger_elig_id).show();
       });
+
+
+
+//disable enable surcharge checkboxes
+
+   $("input[name='surcharge-checkbox']").each( function () {
+        var field_id = $(this).attr('id');
+        var field_group = field_id+'-group';
+
+        if(this.checked){
+           //grey out
+                $("#"+field_group).removeClass("input-disabled");
+
+                //disable inputs inside parent div
+                $("#"+field_group+" :input").attr("disabled", false);
+            }
+            else{
+                $("#"+field_group).addClass("input-disabled");
+                $("#"+field_group+" :input").attr("disabled", true);
+            }
+
+          $("#"+field_id).attr("disabled", false);
+   });
+
+
+   $("input[name='surcharge-checkbox']").click(function() {
+
+         // $("#review-field-no-records" ).addClass("review-filters-disabled");
+        
+         var field_id = $(this).attr('id');
+         var field_group = field_id+'-group';
+         if(this.checked){
+
+            //grey out
+                $("#"+field_group).removeClass("input-disabled");
+
+                //disable inputs inside parent div
+                $("#"+field_group+" :input").attr("disabled", false);
+            }
+            else{
+                $("#"+field_group).addClass("input-disabled");
+                $("#"+field_group+" :input").attr("disabled", true);
+            }
+
+          $("#"+field_id).attr("disabled", false);
+
+        });
+
 
 });
 
